@@ -1,0 +1,14 @@
+<html ng-app="pwnedApp">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/angular-pwned-directive.js"></script>
+	</head>
+	<body ng-controller="PwnedCtrl">
+		<form name="myForm">
+			<input type="email" name="input" ng-model="myEmail" placeholder="Email Address" pwned="pwnedErrorData" />
+			<div ng-show="myForm.input.$error.ispwned">Your email address {{myEmail}} is found in the <a href="https://haveibeenpwned.com/">Have I Been Pwned</a> database! Please don't re-use passwords -- come up with a new one!</div>
+			<pre>{{pwnedErrorData | json}}</pre>
+		</form>
+	</body>
+</html>
