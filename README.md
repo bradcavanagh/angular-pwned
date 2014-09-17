@@ -1,7 +1,7 @@
 angular-pwned
 =============
 
-AngularJS directive for email inputs, checking against the list of breached accounts via the [Have I Been Pwned API](https://haveibeenpwned.com/).
+AngularJS directive for email inputs, checking against the list of breached accounts via the [Have I Been Pwned API](https://haveibeenpwned.com/). A basic example can be found [here](http://canspice.org/local-documents/angular-pwned-example/).
 
 ## Installation
 
