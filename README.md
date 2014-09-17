@@ -1,7 +1,7 @@
 angular-pwned
 =============
 
-AngularJS directive for email inputs, checking against the [Have I Been Pwned API](https://haveibeenpwned.com/).
+AngularJS directive for email inputs, checking against the list of breached accounts via the [Have I Been Pwned API](https://haveibeenpwned.com/).
 
 ## Installation
 
@@ -18,7 +18,7 @@ You'd want to use this directive in an `input` field, something like:
 <input type="email" name="input" ng-model="myEmail" placeholder="Email Address" pwned />
 ```
 
-If the email address is listed in the Have I Been Pwned database, then you can check the appropriate `$error.ispwned` value.
+If the email address is listed in the Have I Been Pwned breached accounts database, then you can check the appropriate `$error.ispwned` value.
 
 If you add a value to the attribute like:
 
@@ -32,3 +32,4 @@ If you add a value to the attribute like:
 
 * It appears that this directive does not work with the Angular 1.3.x branch. Please use 1.2.2 until further notice. No, I haven't yet filed a bug report with AngularJS...
 * The reason behind the `timerDelay` is because you probably don't want to hammer the Have I Been Pwned API every time the user types a letter. Put a little delay on it, and it'll do the request when the user has stopped typing for `timerDelay` milliseconds.
+* This directive does not (yet) support the new [paste search API](http://www.troyhunt.com/2014/09/introducing-paste-searches-and.html).
